@@ -1,0 +1,89 @@
+@import '_variables';
+
+.u-form {
+  max-width: 100%;
+}
+
+.u-field {
+  margin-bottom: 12px;
+
+  & > .label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+  }
+
+  textarea,
+  input[type="text"],
+  input[type="search"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="tel"],
+  input[type="color"] {
+    width: 100%;
+    -webkit-appearance: none;
+    padding: 6px 10px;
+    line-height: 21px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    outline: none;
+    background-color:#f9f9f9;
+    color: #333;
+
+    &:focus {
+      background-color: white;
+      border: 1px solid #1385e5;
+    }
+  }
+
+  .error {
+    color: var(--color-red);
+  }
+}
+
+.u-checkbox {
+  .label {
+    display: inline-block;
+    margin-left: 5px;
+  }
+}
+
+.u-field-x {
+  position: relative;
+  display: table;
+  width: 100%;
+
+  .label {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  & > input,
+  & > .input {
+    position: relative;
+    max-width: 50%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+  }
+}
+
+.u-field-err {
+  input,
+  textarea {
+    border: 1px solid var(--color-red) !important;
+  }
+}
+
+.u-slider-x {
+  width: 100%;
+}
