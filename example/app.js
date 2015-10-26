@@ -14,9 +14,10 @@ var App = React.createClass({
     return {
       model: {
         attrs: [
+          {name: 'published', type: 'boolean', label: 'Published'},
+          {name: 'cover', type: 'file', label: 'Cover image'},
           {name: 'title', type: 'string', label: 'Title'},
-          {name: 'content', type: 'text', label: 'content'},
-          {name: 'published', type: 'boolean', label: 'Published'}
+          {name: 'content', type: 'text', label: 'content'}
         ],
         values: {
           title: 'Sit Tristique Mollis'
@@ -31,9 +32,11 @@ var App = React.createClass({
         <h1>{packageInfo.name}</h1>
         <h2>{packageInfo.description}</h2>
         <Form
+          method="post"
           model={this.state.model}
-          onChange={this.handleChange}
-        />
+          onChange={this.handleChange}>
+          <input type="submit" value="Create post"/>
+        </Form>
         <pre>
           {JSON.stringify(this.state.model, null, '  ')}
         </pre>
@@ -42,7 +45,7 @@ var App = React.createClass({
   },
 
   handleChange(name, value) {
-    console.log(name, 'name', 'value', value);
+    console.log('name', name, 'value', value);
     var model = this.state.model;
     model.values[name] = value;
 
