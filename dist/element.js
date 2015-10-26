@@ -2,7 +2,7 @@
 
 var React = require('react');
 var Select = require('react-select');
-var Switch = require('react-input-switch');
+var InputSwitch = require('react-input-switch');
 var Textarea = require('react-textarea-autosize');
 var InputColor = require('react-input-color');
 // var InputNumber = require('react-input-number');
@@ -20,8 +20,9 @@ function renderElement(attr, value, onChange) {
 
   var handleChange = function handleChange(e) {
     // console.log('handleChange', name, e, e.target.value);
-    if (e.target) return onChange(name, e.target.value);
-    onChange(name, e);
+    if (e.target) {
+      return onChange(name, e.target.value);
+    }onChange(name, e);
   };
 
   // fix react-select options
@@ -106,7 +107,7 @@ function renderElement(attr, value, onChange) {
         React.createElement(
           'div',
           { className: 'input' },
-          React.createElement(Switch, {
+          React.createElement(InputSwitch, {
             checked: !!value,
             onChange: handleChange
           })

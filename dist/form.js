@@ -20,9 +20,9 @@ module.exports = React.createClass({
     var model = this.props.model;
     var values = model.values || {};
 
-    if (attr.name === model.user) return null;
-
-    return React.createElement(Element, {
+    if (attr.name === model.user) {
+      return null;
+    }return React.createElement(Element, {
       key: i,
       attr: attr,
       value: values[attr.name],

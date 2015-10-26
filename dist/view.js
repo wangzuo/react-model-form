@@ -9,8 +9,9 @@ function renderElement(attr, value, onChange) {
   var label = attr.label;
 
   var handleChange = function handleChange(e) {
-    if (e.target) return onChange(name, e.target.value);
-    console.log('handleChange', name, e);
+    if (e.target) {
+      return onChange(name, e.target.value);
+    }console.log('handleChange', name, e);
     onChange(name, e);
   };
 
@@ -212,9 +213,9 @@ module.exports = React.createClass({
     var model = this.props.model;
     var values = model.values || {};
 
-    if (attr.name === model.user) return null;
-
-    return React.createElement(Element, {
+    if (attr.name === model.user) {
+      return null;
+    }return React.createElement(Element, {
       key: i,
       attr: attr,
       value: values[attr.name],
