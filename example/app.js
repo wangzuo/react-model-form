@@ -1,8 +1,9 @@
-require('../lib/form.css');
+require('../lib/form.less');
+require('./app.less');
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Form = require('../lib/model-form');
+var Form = require('../lib/form');
 
 var App = React.createClass({
   displayName: 'App',
@@ -11,12 +12,10 @@ var App = React.createClass({
     return {
       model: {
         attrs: [
-          {name: 'title', type: 'String', label: 'Title'},
-          {name: 'content', type: 'Text', label: 'Content'}
+          {name: 'title', type: 'string', label: 'Title'}
         ],
         values: {
-          title: 'Sit Tristique Mollis',
-          content: 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
+          title: 'Sit Tristique Mollis'
         }
       }
     };
@@ -30,12 +29,15 @@ var App = React.createClass({
           model={this.state.model}
           onChange={this.handleChange}
         />
+        <pre>
+          {JSON.stringify(this.state.model, null, '  ')} 
+        </pre>
       </div>
     );
   },
 
   handleChange(name, value) {
-    console.log('handleChange', name, value);
+    console.log(name, 'name', 'value', value);
     var model = this.state.model;
     model.values[name] = value;
 

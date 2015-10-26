@@ -1,13 +1,11 @@
-:root {
-  --color-white: #ffffff;
-  --color-blue: #1385e5;
-  --color-green: #27ae60;
-  --color-red: #e74c3c;
-  --color-yellow: #f1c40f;
-  --color-light-gray: #eaeaea;
-  --color-gray: #dfe0e4;
-  --color-black: #333333;
-}
+@color-white: #ffffff;
+@color-blue: #1385e5;
+@color-green: #27ae60;
+@color-red: #e74c3c;
+@color-yellow: #f1c40f;
+@color-light-gray: #eaeaea;
+@color-gray: #dfe0e4;
+@color-black: #333333;
 
 .u-form {
   max-width: 100%;
@@ -54,7 +52,7 @@
   }
 
   .error {
-    color: var(--color-red);
+    color: @color-red;
   }
 }
 
@@ -89,7 +87,7 @@
 .u-field-err {
   input,
   textarea {
-    border: 1px solid var(--color-red) !important;
+    border: 1px solid @color-red !important;
   }
 }
 

@@ -1,1 +1,1 @@
-module.exports = require('./lib/model-form');
+module.exports = require('./lib/form');
