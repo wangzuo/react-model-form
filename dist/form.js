@@ -20,9 +20,7 @@ module.exports = React.createClass({
     var model = this.props.model;
     var values = model.values || {};
 
-    if (attr.name === model.user) {
-      return null;
-    }return React.createElement(Element, {
+    return React.createElement(Element, {
       key: i,
       attr: attr,
       value: values[attr.name],
@@ -39,7 +37,6 @@ module.exports = React.createClass({
       'form',
       props,
       attrs.map(this.renderAttr),
-      React.createElement('input', { name: '_model', type: 'hidden', value: model.table }),
       this.props.children
     );
   }

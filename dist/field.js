@@ -14,9 +14,9 @@ module.exports = React.createClass({
   },
 
   renderError: function renderError() {
-    if (!this.props.error) {
-      return null;
-    }return React.createElement(
+    if (!this.props.error) return null;
+
+    return React.createElement(
       'span',
       { className: 'error' },
       this.props.error
@@ -24,9 +24,9 @@ module.exports = React.createClass({
   },
 
   renderLabel: function renderLabel() {
-    if (!this.props.label) {
-      return null;
-    }return React.createElement(
+    if (!this.props.label) return null;
+
+    return React.createElement(
       'label',
       { className: 'label' },
       this.props.label
