@@ -28,6 +28,7 @@ var App = React.createClass({
         attrs: [
           {name: 'categories', type: 'select', label: 'Categories', options: categories, multiple: true, select_label: 'name', 'select_value': 'id'},
           {name: 'published', type: 'boolean', label: 'Published'},
+          {name: 'publish_date', type: 'datetime', label: 'Publish Date'},
           {name: 'password', type: 'password', label: 'Password'},
           {name: 'cover', type: 'file', label: 'Cover image'},
           {name: 'title', type: 'string', label: 'Title'},
