@@ -1,1 +1,1 @@
-module.exports = require('./lib/form');
+module.exports = require('./dist/form');
