@@ -19,7 +19,17 @@ pre {
   margin: 0 auto;
 }
 
+.row {
+  &:after {
+    display: table;
+    content: "";
+    clear: both;
+  }
+}
+
 .col {
+  position: relative;
+  display: inline;
   width: 50%;
-  display: inline-block;
+  float: left;
 }

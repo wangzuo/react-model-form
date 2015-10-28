@@ -42,20 +42,24 @@ var App = React.createClass({
   render() {
     return (
       <div className="app">
-        <div className="col">
+        <div className="row">
           <h1>{_package.name}</h1>
           <h2>{_package.description}</h2>
-          <Form
-            method="post"
-            model={this.state.model}
-            onChange={this.handleChange}>
-            <input type="submit" value="Create post"/>
-          </Form>
         </div>
-        <div className="col">
-          <pre>
-            {JSON.stringify(this.state.model, null, '  ')}
-          </pre>
+        <div className="row">
+          <div className="col">
+            <Form
+              method="post"
+              model={this.state.model}
+              onChange={this.handleChange}>
+              <input type="submit" value="Create post"/>
+            </Form>
+          </div>
+          <div className="col">
+            <pre>
+              {JSON.stringify(this.state.model, null, '  ')}
+            </pre>
+          </div>
         </div>
       </div>
     );
