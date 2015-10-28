@@ -26,7 +26,7 @@ var App = React.createClass({
           title: 'Sit Tristique Mollis'
         },
         attrs: [
-          {name: 'categories', type: 'select', label: 'Categories', options: categories, multiple: true},
+          {name: 'categories', type: 'select', label: 'Categories', options: categories, multiple: true, select_label: 'name', 'select_value': 'id'},
           {name: 'published', type: 'boolean', label: 'Published'},
           {name: 'password', type: 'password', label: 'Password'},
           {name: 'cover', type: 'file', label: 'Cover image'},
