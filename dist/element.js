@@ -15,7 +15,8 @@ module.exports = React.createClass({
       onChange(name, value);
     };
 
-    if (Elements[type]) return Elements[type].form(attr, value, handleChange);else throw new Error(type + ' element not defined');
+    if (!Elements[type]) throw new Error('type ' + type + ' element not defined');
+    return Elements[type](attr, value, handleChange);
   },
 
   render: function render() {

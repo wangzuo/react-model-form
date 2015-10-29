@@ -1,13 +1,14 @@
 'use strict';
 
+var React = require('react');
 var Select = require('react-select');
 var Field = require('../field');
 
-exports.form = function (attr, value, onChange) {
+module.exports = function (attr, value, onChange) {
   var options = attr.options.map(function (option) {
     return {
-      value: option.id,
-      label: option.name
+      value: option[attr.select_value || 'id'],
+      label: option[attr.select_label || 'name']
     };
   });
 
@@ -25,13 +26,5 @@ exports.form = function (attr, value, onChange) {
       multi: attr.multiple,
       onChange: handleChange
     })
-  );
-};
-
-exports.view = function (attr, value) {
-  return React.createElement(
-    Field,
-    { label: attr.label },
-    value
   );
 };

@@ -1,9 +1,10 @@
 'use strict';
 
+var React = require('react');
 var InputSlider = require('react-input-slider');
 var Field = require('../field');
 
-exports.form = function (attr, value, onChange) {
+module.exports = function (attr, value, onChange) {
   function handleChange(pos) {
     onChange(pos.x);
   }
@@ -18,13 +19,5 @@ exports.form = function (attr, value, onChange) {
       xmax: attr.max,
       onChange: handleChange
     })
-  );
-};
-
-exports.view = function (attr, value) {
-  return React.createElement(
-    Field,
-    { label: attr.label },
-    value
   );
 };

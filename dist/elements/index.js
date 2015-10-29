@@ -9,5 +9,6 @@ module.exports = {
   'range': require('./range'),
   'password': require('./password'),
   'file': require('./file'),
-  'select': require('./select')
+  'select': require('./select'),
+  'datetime': require('./datetime')
 };

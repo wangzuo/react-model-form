@@ -1,6 +1,6 @@
 {
   "name": "react-model-form",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React model form",
   "main": "index.js",
   "scripts": {

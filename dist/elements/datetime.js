@@ -1,7 +1,6 @@
 'use strict';
 
 var React = require('react');
-var Textarea = require('react-textarea-autosize');
 var Field = require('../field');
 
 module.exports = function (attr, value, onChange) {
@@ -12,8 +11,8 @@ module.exports = function (attr, value, onChange) {
   return React.createElement(
     Field,
     { label: attr.label },
-    React.createElement(Textarea, {
-      rows: attr.rows || 4,
+    React.createElement('input', {
+      type: 'date',
       name: attr.name,
       value: value,
       onChange: handleChange

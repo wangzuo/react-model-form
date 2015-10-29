@@ -1,10 +1,11 @@
 'use strict';
 
 var cx = require('classnames');
+var blacklist = require('blacklist');
 var React = require('react');
 
 module.exports = React.createClass({
-  displayName: 'Field',
+  displayName: 'ModelFormField',
 
   getDefaultProps: function getDefaultProps() {
     return {
@@ -15,7 +16,6 @@ module.exports = React.createClass({
 
   renderError: function renderError() {
     if (!this.props.error) return null;
-
     return React.createElement(
       'span',
       { className: 'error' },
@@ -25,7 +25,6 @@ module.exports = React.createClass({
 
   renderLabel: function renderLabel() {
     if (!this.props.label) return null;
-
     return React.createElement(
       'label',
       { className: 'label' },
@@ -35,14 +34,15 @@ module.exports = React.createClass({
 
   render: function render() {
     var horizontal = this.props.horizontal;
-    var cn = cx('u-field', {
+    var props = blacklist(this.props, 'horizontal', 'label', 'className', 'children');
+    props.className = cx('u-field', {
       'u-field-x': horizontal,
       'u-field-err': this.props.error
-    });
+    }, this.props.className);
 
     return React.createElement(
       'div',
-      { className: cn },
+      props,
       this.renderLabel(),
       this.props.children,
       this.renderError()
