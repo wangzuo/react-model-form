@@ -13,7 +13,6 @@ module.exports = React.createClass({
       horizontal: false
     };
   },
-
   renderError: function renderError() {
     if (!this.props.error) return null;
     return React.createElement(
@@ -22,7 +21,6 @@ module.exports = React.createClass({
       this.props.error
     );
   },
-
   renderLabel: function renderLabel() {
     if (!this.props.label) return null;
     return React.createElement(
@@ -31,7 +29,6 @@ module.exports = React.createClass({
       this.props.label
     );
   },
-
   render: function render() {
     var horizontal = this.props.horizontal;
     var props = blacklist(this.props, 'horizontal', 'label', 'className', 'children');

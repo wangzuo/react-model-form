@@ -18,7 +18,6 @@ module.exports = React.createClass({
     if (!Elements[type]) throw new Error('type ' + type + ' element not defined');
     return Elements[type](attr, value, handleChange);
   },
-
   render: function render() {
     var attr = this.props.attr;
     var value = this.props.value;

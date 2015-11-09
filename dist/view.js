@@ -190,7 +190,6 @@ var Element = React.createClass({
     var value = this.props.value;
     return renderElement(attr, value, this.handleChange);
   },
-
   handleChange: function handleChange(name, value) {
     if (this.props.onChange) this.props.onChange(name, value);
   }
@@ -207,7 +206,6 @@ module.exports = React.createClass({
       }
     };
   },
-
   renderAttr: function renderAttr(attr, i) {
     var model = this.props.model;
     var values = model.values || {};
@@ -221,7 +219,6 @@ module.exports = React.createClass({
       onChange: this.handleChange
     });
   },
-
   render: function render() {
     var model = this.props.model;
     var attrs = model.attrs;

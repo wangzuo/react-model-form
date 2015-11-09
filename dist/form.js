@@ -15,7 +15,6 @@ module.exports = React.createClass({
       }
     };
   },
-
   renderAttr: function renderAttr(attr, i) {
     var model = this.props.model;
     var values = model.values || {};
@@ -27,7 +26,6 @@ module.exports = React.createClass({
       onChange: this.props.onChange
     });
   },
-
   render: function render() {
     var model = this.props.model;
     var attrs = model.attrs;
