@@ -7,7 +7,8 @@ require('./app.less');
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Form = require('../lib/form');
+var elements = require('../lib/elements');
+var Form = require('../lib/form')(elements);
 var _package = require('../package.json');
 
 var categories = [
