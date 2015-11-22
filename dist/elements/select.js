@@ -13,7 +13,9 @@ module.exports = function (attr, value, onChange) {
   });
 
   function handleChange(value) {
-    onChange(value.split(','));
+    onChange(value.map(function (obj) {
+      return obj.value;
+    }));
   }
 
   return React.createElement(
