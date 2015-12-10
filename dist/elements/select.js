@@ -13,9 +13,13 @@ module.exports = function (attr, value, onChange) {
   });
 
   function handleChange(value) {
-    onChange(value.map(function (obj) {
-      return obj.value;
-    }));
+    if (attr.multiple) {
+      onChange(value.map(function (obj) {
+        return obj.value;
+      }));
+    } else {
+      onChange(value.value);
+    }
   }
 
   return React.createElement(
