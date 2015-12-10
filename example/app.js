@@ -27,6 +27,7 @@ var App = React.createClass({
           title: 'Sit Tristique Mollis'
         },
         attrs: [
+          {name: 'category', type: 'select', label: 'Category', options: categories},
           {name: 'categories', type: 'select', label: 'Categories', options: categories, multiple: true, select_label: 'name', 'select_value': 'id'},
           {name: 'published', type: 'boolean', label: 'Published'},
           {name: 'publish_date', type: 'datetime', label: 'Publish Date'},
@@ -71,6 +72,8 @@ var App = React.createClass({
     console.log('name', name, 'value', value);
     var model = this.state.model;
     model.values[name] = value;
+
+    console.log('values', model.values);
 
     this.setState({model: model});
   }
