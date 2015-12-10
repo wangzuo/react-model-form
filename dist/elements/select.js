@@ -14,11 +14,11 @@ module.exports = function (attr, value, onChange) {
 
   function handleChange(value) {
     if (attr.multiple) {
-      onChange(value.map(function (obj) {
+      onChange((value || []).map(function (obj) {
         return obj.value;
       }));
     } else {
-      onChange(value.value);
+      onChange(value === null ? null : value.value);
     }
   }
 
