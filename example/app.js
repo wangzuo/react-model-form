@@ -1,7 +1,7 @@
 require('react-input-color/lib/input-color.less');
 require('react-input-switch/lib/switch.less');
 require('react-input-slider/lib/input-slider.less');
-require('../lib/select.less');
+require('react-select/dist/react-select.css');
 require('../lib/form.less');
 require('./app.less');
 
