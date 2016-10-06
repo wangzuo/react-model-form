@@ -44,7 +44,7 @@
     "less-loader": "^2.2.1",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.14.0"
+    "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
     "blacklist": "^1.1.2",
